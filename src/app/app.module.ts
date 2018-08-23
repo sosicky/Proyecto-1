@@ -7,7 +7,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { InicioService } from './Servicios/inicio.service';
 import { HttpModule } from '../../node_modules/@angular/http';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { HttpClientModule } from '../../node_modules/@angular/common/http';
   imports: [
     BrowserModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule,  NgxPaginationModule
   ],
   providers: [
     appRoutingProviders,

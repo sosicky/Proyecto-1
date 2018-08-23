@@ -3,7 +3,7 @@
 
       <div class="card-deck">
 
-        <div *ngFor="let item of items ">
+        <div *ngFor="let item of items | paginate: { itemsPerPage: 12, currentPage: p }">
           <div class="card">
             <img class="card-img-top" src="src/assets/img/Avicii.jpg" alt="Card image cap">
             <div class="card-body">
@@ -12,21 +12,13 @@
             </div>
           </div>
         </div>
-        <div class="card">
-          <img class="card-img-top" src="src/assets/img/YellowClaw.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Yellow Claw</h5>
-            <p class="card-text"></p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="src/assets/img/YellowClaw.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Yellow Claw</h5>
-            <p class="card-text"></p>
-          </div>
-        </div>
       </div>
-
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="text-center ">
+        <pagination-controls previousLabel="" nextLabel="" (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </div>
   </div>
 </div>
