@@ -8,10 +8,12 @@ import { InicioService } from './Servicios/inicio.service';
 import { HttpModule } from '../../node_modules/@angular/http';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { BarraNavegacionComponent } from './componentes/barra-navegacion/barra-navegacion.component';
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent
+    InicioComponent,
+    BarraNavegacionComponent
   ],
   imports: [
     BrowserModule,
